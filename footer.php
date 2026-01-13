@@ -18,8 +18,14 @@
                 </div>
             </div>
             <div class="cell large-6">
-                <?php if (has_nav_menu('footer-menu')) {
-                    wp_nav_menu(['theme_location' => 'footer-menu', 'menu_class' => 'footer-menu', 'depth' => 1]);
+                <?php if (has_nav_menu('footer-first-menu')) {
+                    wp_nav_menu(['theme_location' => 'footer-first-menu', 'menu_class' => 'footer-menu footer-first-menu', 'depth' => 1]);
+                } ?>
+                <?php if (has_nav_menu('footer-second-menu')) {
+                    wp_nav_menu(['theme_location' => 'footer-second-menu', 'menu_class' => 'footer-menu footer-second-menu', 'depth' => 1]);
+                } ?>
+                <?php if (has_nav_menu('footer-third-menu')) {
+                    wp_nav_menu(['theme_location' => 'footer-third-menu', 'menu_class' => 'footer-menu footer-third-menu', 'depth' => 2]);
                 } ?>
             </div>
             <div class="cell large-3 footer__sp">

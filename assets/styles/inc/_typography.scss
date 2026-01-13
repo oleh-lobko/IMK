@@ -75,14 +75,20 @@ address {
 }
 
 a {
-  color: $primary-color;
+  color: $text-color;
   transition: all 0.2s ease-in-out;
 
   &:hover,
   &:focus {
     /* basic hover and focus effects */
-    color: darken($primary-color, 20);
+    color: $primary;
   }
+}
+
+.title {
+  font-weight: 900;
+  font-family: $sub-font;
+  text-transform: uppercase;
 }
 
 /* ---------------------------------------
@@ -195,11 +201,27 @@ input[type='button'] {
   //}
 }
 
-/* Button additional styles */
+/* Link additional styles */
 
-.button {
+.link a {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: rem-calc(42px) rem-calc(55px);
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  text-align: center;
+  max-width: rem-calc(710px);
+  margin: auto;
   &:hover,
   &:focus {
     /* basic hover and focus effects */
+  }
+  @include breakpoint(medium down) {
+    font-size: rem-calc(20px);
+    padding: rem-calc(20px);
+  }
+  @include breakpoint(xlarge down) {
+    width: 90%;
   }
 }

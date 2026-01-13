@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  font-family: $font;
 }
 
 body {
@@ -8,6 +9,8 @@ body {
   flex-direction: column;
   height: auto;
   min-height: 100vh;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 main {
@@ -16,6 +19,9 @@ main {
 
 .grid-container {
   width: 100%;
+  &--s {
+    max-width: rem-calc(1480px);
+  }
 }
 
 *:last-child {
@@ -48,6 +54,17 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    &::before {
+      content: '\f1ce';
+      display: block;
+
+      /** TODO: Check fontawesome icon */
+      //font-family: $fa;
+      font-size: 40px;
+      font-weight: 900;
+      animation: spin 1s ease-in-out infinite;
+    }
   }
 
   &--hidden {
@@ -84,6 +101,16 @@ main {
   height: auto;
   padding: 10px 15px;
   cursor: pointer;
+  //font-size: 0;
+
+  &::after {
+    //content: "\f002";
+
+    /** TODO: Check fontawesome icon */
+    //font-family: $fa;
+    font-size: 20px;
+    font-weight: 900;
+  }
 }
 
 //use @extend %bgcover; to selector if you need background cover;

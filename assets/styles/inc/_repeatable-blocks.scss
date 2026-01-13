@@ -3,19 +3,29 @@
 --------------------------------------- */
 
 .stay-tuned {
+  @include list-unstyled;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 2rem;
+  font-size: 0;
+  margin-top: rem-calc(54px);
+  @include breakpoint(medium down) {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
 
-  &__item {
+.stay-tuned__item {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.stay-tuned__link {
+  display: block;
+  color: $dark-grey;
+  .fab {
     display: block;
-
-    svg {
-      display: block;
-      width: auto;
-      height: 1.5rem;
-    }
+    font-size: rem-calc(43px);
   }
 }
 

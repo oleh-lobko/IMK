@@ -1,15 +1,12 @@
 .footer {
   margin-top: auto;
+  color: $dark-grey;
 }
 
 .footer__logo {
   img {
     max-height: 120px;
   }
-}
-
-.footer__sp {
-  text-align: right;
 }
 
 .footer-menu {
@@ -27,10 +24,69 @@
   }
 }
 
-.footer__copy {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: $light-gray;
-  font-size: 12px;
-  text-align: center;
+.footer {
+  background-color: $fate-black;
+  padding-top: rem-calc(127px);
+  padding-bottom: rem-calc(205px);
+
+  &__copy {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: rem-calc(23px);
+    text-transform: uppercase;
+    font-family: $sub-font;
+    margin-top: rem-calc(41px);
+  }
+
+  &__title,
+  &__title h3 {
+    font-size: rem-calc(23px);
+    text-transform: uppercase;
+    color: $grey;
+  }
+
+  &__menus {
+    display: flex;
+    gap: rem-calc(105px);
+    flex-wrap: wrap;
+    @include breakpoint(medium down) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__menu-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem-calc(56px);
+    gap: rem-calc(22px);
+
+    a {
+      font-size: rem-calc(25px);
+      font-family: $sub-font;
+      color: inherit;
+
+      &:hover {
+        color: $wet-sand;
+      }
+    }
+  }
+
+  &__sp {
+    margin-top: 6px;
+  }
+  @include breakpoint(medium down) {
+    text-align: center;
+    padding-bottom: rem-calc(60px);
+    &__menus {
+      row-gap: 2rem;
+    }
+    &__menu-links {
+      margin-top: 1rem;
+    }
+    &__container {
+      gap: 2rem;
+    }
+  }
 }

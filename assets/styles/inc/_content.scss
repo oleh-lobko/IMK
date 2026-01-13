@@ -1,6 +1,39 @@
-.main-content {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.heading {
+  display: flex;
+  align-items: flex-end;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(39, 28, 40, 0.4);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .grid-container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.archive {
+  .grid-container {
+    max-width: 92.5rem;
+  }
+}
+
+.page-title {
+  font-size: clamp(
+    40px,
+    calc(40px + (80 - 40) * ((100vw - 375px) / (1920 - 375))),
+    80px
+  );
+  margin-bottom: rem-calc(31px);
+  letter-spacing: 0.16rem;
 }
 
 /* 404 page */

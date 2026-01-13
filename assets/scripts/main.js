@@ -7,7 +7,7 @@ import './plugins/modernizr.min';
 import 'slick-carousel';
 import 'jquery-match-height';
 import objectFitImages from 'object-fit-images';
-// import '@fancyapps/fancybox/dist/jquery.fancybox.min';
+import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 // import { jarallax, jarallaxElement } from 'jarallax';
 // import ScrollOut from 'scroll-out';
 
@@ -75,6 +75,14 @@ $(document).on('ready', function () {
   if ($('.of-cover').length) {
     objectFitImages('.of-cover');
   }
+
+  $('[data-fancybox]').fancybox({
+    Carousel: {
+      Video: {
+        autoplay: false,
+      },
+    },
+  });
 
   /**
    * Add fancybox to images
@@ -198,6 +206,30 @@ $(document).on('ready', function () {
   });
 
   resizeVideo();
+
+  if ($('.testimonials__slider').length) {
+    $('.testimonials__slider').slick({
+      infinite: true,
+    });
+  }
+
+  if ($('#h-tabs-select').length) {
+    $('#h-tabs-select').on('change', function () {
+      const val = $(this).val();
+      if ($(val)) {
+        $('.tabs-panel').each(function () {
+          $(this).removeClass('is-active');
+        });
+        $(val).addClass('is-active');
+      }
+    });
+  }
+
+  if ($('.search').length && $('.header__search-button').length) {
+    $('.header__search-button').on('click', () => {
+      $('.search').toggle();
+    });
+  }
 });
 
 /**

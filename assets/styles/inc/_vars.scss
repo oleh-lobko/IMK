@@ -1,19 +1,35 @@
 // Project variables
 // Note: Prefer using framework variables
 
-//$blue: #1a608b;
-//
-//$text-color: #333;
+$white: #ffffff;
+$sand: #eae8bf;
+$wet-sand: #c2c09e;
+$black: #1c1c1c;
+$violet: #271c28;
+$gold: #ddc558;
+$matt-black: #222221;
+$fate-black: #2b2b28;
+$dark-grey: #666666;
+$grey: #aaaaaa;
 
-//$primary-color: $blue;
-//$sub-color: $primary-color;
+$primary: $sand;
+$sub-color: $primary;
+$background-color: $matt-black;
+$text-color: $white;
 
-$font: 'Open Sans', serif;
-//$sub-font: $font;
+$font: 'Bitter', serif;
+$sub-font: 'Roboto', sans-serif;
+$fa: 'Font Awesome 6 Free';
+//$fab: 'Font Awesome 6 Brands';
+
+// Font Awesome Vars
+//$fa-font-display: swap;
 
 // Project mixins
 
 // Custom fonts
 :root {
-  --content-size: 80rem;
+  --content-size: rem-calc(1650px);
 }
+
+$transition: all 0.3s ease;

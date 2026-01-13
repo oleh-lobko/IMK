@@ -2,6 +2,83 @@
   @include breakpoint(small down) {
     margin-top: 50px;
   }
+  &-search {
+    margin-top: 5px;
+    margin-bottom: rem-calc(72px);
+    label {
+      display: none;
+    }
+    input {
+      border: 5px solid $wet-sand;
+      background: transparent;
+      border-radius: rem-calc(10px) 0 0 rem-calc(10px);
+      height: 100%;
+      border-right: 0;
+      font-size: rem-calc(26px);
+      color: $text-color;
+      padding-left: rem-calc(43px);
+      &:focus {
+        background: transparent;
+      }
+      &::placeholder {
+        color: $dark-grey;
+      }
+    }
+    .wp-block-search__inside-wrapper {
+      height: rem-calc(83px);
+    }
+    .wp-block-search__button {
+      height: 100%;
+      min-width: rem-calc(83px);
+      background: $primary;
+      margin: 0;
+      position: relative;
+      border-radius: 0 rem-calc(10px) rem-calc(10px) 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        content: '\f002';
+        color: $white;
+        font-family: 'Font Awesome\ 6 Free';
+        font-weight: 900;
+        font-size: rem-calc(40px);
+      }
+    }
+  }
+  &-title {
+    font-size: rem-calc(23px);
+    color: $grey;
+    text-transform: uppercase;
+    font-family: $sub-font;
+    font-weight: 900;
+    margin-bottom: rem-calc(20px);
+  }
+  &-links,
+  &-links a {
+    font-size: rem-calc(28px);
+    color: $primary;
+    list-style: none;
+  }
+
+  &-links {
+    line-height: 151%;
+    margin: 0;
+    a {
+      display: flex;
+      gap: 5px;
+      letter-spacing: 0.016rem;
+      &::before {
+        content: '-';
+        position: relative;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.wp-block-group {
+  margin-bottom: rem-calc(85px);
 }
 
 .widget {

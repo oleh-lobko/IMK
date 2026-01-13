@@ -773,3 +773,72 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   left: -9000px;
   display: none !important;
 }
+
+.fwp .gform_wrapper .gfield {
+  height: rem-calc(83px);
+  margin-bottom: 0;
+
+  .ginput_container,
+  input,
+  select {
+    height: 100%;
+  }
+
+  input,
+  select {
+    border: 5px solid $wet-sand;
+    border-radius: rem-calc(10px);
+    background: transparent;
+    font-size: rem-calc(26px);
+    color: $text-color;
+    font-family: $sub-font;
+
+    &::placeholder {
+      color: $dark-grey;
+    }
+  }
+
+  select {
+    color: $dark-grey;
+  }
+}
+
+.gform_button {
+  border-radius: rem-calc(10px) !important;
+  background: $gold !important;
+  color: $matt-black !important;
+  font-size: rem-calc(28px) !important;
+  height: rem-calc(93px) !important;
+  width: 100% !important;
+  text-transform: uppercase !important;
+  font-family: $sub-font !important;
+  font-weight: 900 !important;
+
+  &:hover {
+    background: $primary !important;
+  }
+}
+
+.gform-theme--foundation .gform_fields {
+  column-gap: 0 !important;
+}
+
+@include breakpoint(medium up) {
+  .gfield--width-half:has(+ .gfield--width-half) {
+    select {
+      border-radius: rem-calc(10px) 0 0 rem-calc(10px) !important;
+      border-right-width: 2.5px !important;
+    }
+  }
+
+  .gfield--width-half + .gfield--width-half {
+    select {
+      border-radius: 0 rem-calc(10px) rem-calc(10px) 0 !important;
+      border-left-width: 2.5px !important;
+    }
+  }
+}
+
+.ginput_container :is(input, select) {
+  padding-left: 3rem !important;
+}

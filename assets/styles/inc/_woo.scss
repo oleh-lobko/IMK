@@ -566,6 +566,15 @@ $input-height: ($input-font-size * unitless-calc($input-line-height)) +
         }
       }
 
+      &::after {
+        content: '\f078';
+        color: $primary-color;
+        //font-family: $fa;
+        font-size: rem-calc(11);
+        font-weight: 900;
+        line-height: $input-height;
+      }
+
       b {
         display: none;
       }
@@ -579,7 +588,7 @@ $input-height: ($input-font-size * unitless-calc($input-line-height)) +
 
     .select2-selection__arrow {
       &::after {
-        //
+        content: '\f077' !important;
       }
     }
   }

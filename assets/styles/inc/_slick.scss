@@ -1,10 +1,10 @@
 /* Slick slider default styles */
 
 // Override slick variables (to use default slick styles just remove variables below)
-//$slick-font-family: '';
-//$slick-prev-character: '\f104';
-//$slick-next-character: '\f105';
-//$slick-dot-character: '\f111';
+$slick-font-family: $fa;
+$slick-prev-character: '\f104';
+$slick-next-character: '\f105';
+$slick-dot-character: '\f111';
 $slick-arrow-color: $white;
 $slick-dot-color: $primary-color;
 $slick-dot-color-active: $primary-color;
@@ -48,4 +48,9 @@ $slick-arrow-size: 2rem;
       }
     }
   }
+}
+
+.slick-track {
+  display: flex;
+  overflow: hidden;
 }

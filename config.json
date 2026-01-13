@@ -1,6 +1,6 @@
 {
-  "devUrl": "%SITE_URL%",
-  "themeName": "fwp",
+  "devUrl": "http://ready-for-feedback3.com/internship/lobko/imk",
+  "themeName": "imk",
   "proxyUrl": "https://localhost:3000",
   "open": false,
   "bsWatchFiles": [

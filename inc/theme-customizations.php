@@ -69,7 +69,9 @@ add_post_type_support('page', 'excerpt');
 // Register Navigation Menu
 register_nav_menus([
     'header-menu' => __('Header Menu', 'fwp'),
-    'footer-menu' => __('Footer Menu', 'fwp'),
+    'footer-first-menu' => __('Footer First Menu', 'fwp'),
+    'footer-second-menu' => __('Footer Second Menu', 'fwp'),
+    'footer-third-menu' => __('Footer Third  Menu', 'fwp'),
 ]);
 
 // Register Sidebars

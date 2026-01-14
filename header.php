@@ -24,11 +24,6 @@ use theme\FoundationNavigation;
 
 <body <?php body_class('no-outline fwp'); ?>>
 <?php wp_body_open(); ?>
-
-<!-- <div class="preloader hide-for-medium">
-    <div class="preloader__icon"></div>
-</div> -->
-
 <!-- BEGIN of header -->
 <header class="header">
     <div class="grid-container grid-container--s menu-grid-container">

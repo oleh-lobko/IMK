@@ -204,13 +204,13 @@ add_shortcode('slider', function () {
                 $homeSlider.slick({
                     cssEase: 'ease',
                     fade: true,  // Cause trouble if used slidesToShow: more than one
-                    // arrows: false,
+                    arrows: false,
                     dots: true,
                     infinite: true,
                     speed: 500,
                     autoplay: true,
                     pauseOnHover: true,
-                    autoplaySpeed: 5000,
+                    autoplaySpeed: 3000,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     rows: 0, // Prevent generating extra markup
@@ -260,7 +260,7 @@ add_shortcode('slider', function () {
                             </div>
                         <?php } ?>
 
-                        <div class="grid-container home-slide__caption">
+                        <div class="grid-container grid-container--s home-slide__caption">
                             <div class="grid-x grid-margin-x">
                                 <div class="cell">
                                     <h3><?php the_title(); ?></h3>

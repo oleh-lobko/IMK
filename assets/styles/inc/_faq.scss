@@ -1,0 +1,20 @@
+.faqs {
+  padding-bottom: rem-calc(80px);
+  @include breakpoint(large) {
+    padding-bottom: rem-calc(163px);
+  }
+
+  &__title {
+    margin-bottom: rem-calc(40px);
+
+    h2 {
+      font-size: rem-calc(40px);
+      letter-spacing: 0.66rem;
+      text-align: center;
+
+      @include breakpoint(large) {
+        font-size: rem-calc(60px);
+      }
+    }
+  }
+}

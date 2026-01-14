@@ -1,0 +1,72 @@
+.video {
+  margin-bottom: rem-calc(156px);
+  &__item {
+    cursor: pointer;
+    max-width: rem-calc(1440px);
+    margin: auto;
+    display: block;
+    height: rem-calc(300px);
+
+    &:hover {
+      .video__wrapper::after {
+        transform: translate(-50%, -40%) scale(1.1);
+      }
+    }
+
+    @include breakpoint(medium) {
+      height: rem-calc(600px);
+    }
+
+    @include breakpoint(large) {
+      height: rem-calc(753px);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: calc(100% + 85px);
+      width: 100%;
+      display: block;
+      background-image: url('../images/video-cover.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include breakpoint(medium down) {
+        height: calc(100% + 1rem);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: rem-calc(207px);
+      height: rem-calc(171px);
+      background-image: url('../images/video-button.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      transition: $transition;
+      @include breakpoint(medium down) {
+        height: rem-calc(50px);
+        width: rem-calc(88px);
+      }
+    }
+
+    img {
+      font-size: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

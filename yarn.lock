@@ -1262,10 +1262,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-free@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "@fortawesome/fontawesome-free@npm:7.1.0"
-  checksum: 10c0/3bcaf2c18f3b2ece0fb5640681f13051cb787d686ab444437b3605ba3dca9dce4c7c1f844d94b7ad011482ac20b2b387f3a4c33c2739b50c4425fe529ab7b050
+"@fortawesome/fontawesome-free@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/fontawesome-free@npm:6.2.1"
+  checksum: 10c0/4749b2c2c95a516ac566e6300ddb290785211d53e56dda126509a5a1b5a7b1a47d3928753ff7d6eef6bf02dfab7a34fb2c6e5c2a2990793172a4da68dea04714
   languageName: node
   linkType: hard
 
@@ -1854,11 +1854,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=10.0.0":
-  version: 25.0.7
-  resolution: "@types/node@npm:25.0.7"
+  version: 25.0.8
+  resolution: "@types/node@npm:25.0.8"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/a9feeb16a6487621ef96158e7a9759f89e3c1726189c7b19a9e6d3e0d581499c62e441e120e5a334e9eb01bc4d26644f27767fd5931d6d4f177d14f4f8e3f9ab
+  checksum: 10c0/2282464cd928ab184b2310b79899c76bfaa88c8d14640dfab2f9218fdee7e2d916056492de683aa3a26050c8f3bbcade0305616a55277a7c344926c0393149e0
   languageName: node
   linkType: hard
 
@@ -5292,7 +5292,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.25.4"
     "@babel/preset-react": "npm:^7.24.7"
     "@fancyapps/fancybox": "npm:^3.5.7"
-    "@fortawesome/fontawesome-free": "npm:^7.1.0"
+    "@fortawesome/fontawesome-free": "npm:^6.2.1"
     autoprefixer: "npm:^10.2.6"
     babel-loader: "npm:^9.1.0"
     babel-minify-webpack-plugin: "npm:^0.3.1"

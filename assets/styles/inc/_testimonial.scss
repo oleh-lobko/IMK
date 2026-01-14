@@ -1,0 +1,195 @@
+.testimonials {
+  margin-bottom: rem-calc(131px);
+  text-align: center;
+
+  &__slider {
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      max-width: rem-calc(1311px);
+      background-image: url('../images/testimonials-border.png');
+      background-size: 100% calc(100% - 143px);
+      background-repeat: no-repeat;
+      background-position: center 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .slick-arrow {
+    width: rem-calc(42px);
+    height: rem-calc(50px);
+    position: absolute;
+    top: 56%;
+  }
+
+  .slick-next,
+  .slick-prev {
+    &::before {
+      content: '\f0d9';
+      font-size: 4rem;
+      display: block;
+      background-size: contain;
+      width: rem-calc(42px);
+      height: rem-calc(50px);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .slick-next {
+    right: 2.7rem;
+    &::before {
+      content: '\f0da';
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' transform='rotate(90)' viewBox='0 0 15 15'%3E%3Cpath fill='%23fff' d='M7.932 1.248a.5.5 0 0 0-.864 0l-7 12A.5.5 0 0 0 .5 14h14a.5.5 0 0 0 .432-.752l-7-12Z'/%3E%3C/svg%3E");
+    }
+  }
+
+  .slick-prev {
+    left: 2.7rem;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' transform='rotate(270)' viewBox='0 0 15 15'%3E%3Cpath fill='%23fff' d='M7.932 1.248a.5.5 0 0 0-.864 0l-7 12A.5.5 0 0 0 .5 14h14a.5.5 0 0 0 .432-.752l-7-12Z'/%3E%3C/svg%3E");
+    }
+  }
+
+  .slick-list {
+    padding-bottom: 8.75rem;
+    max-width: 79.9375rem;
+    margin: auto;
+  }
+
+  &__link {
+    text-align: center;
+    position: relative;
+    transform: translateY(-60%);
+
+    a {
+      text-transform: uppercase;
+      font-size: rem-calc(20px);
+      color: $black;
+      background: $white;
+      padding: rem-calc(7px) rem-calc(38px);
+      display: inline-block;
+      font-weight: 700;
+
+      &:hover {
+        background: $primary;
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+    &__slider {
+      &::before {
+        background-size: 100% calc(100% - 82px);
+      }
+    }
+    .slick-arrow {
+      top: 94%;
+    }
+    .slick-list {
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+.testimonial {
+  text-align: center;
+  max-width: rem-calc(885px);
+  margin: auto;
+
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem-calc(57px);
+
+    &::before {
+      position: absolute;
+      content: '';
+      max-width: rem-calc(605px);
+      width: 100%;
+      height: 100%;
+      max-height: rem-calc(221px);
+      display: block;
+      background-image: url('../images/testimonial-picture-decoration.png');
+      background-size: contain;
+      z-index: -1;
+    }
+
+    img {
+      height: rem-calc(316px);
+      width: rem-calc(316px);
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: rem-calc(72px);
+    font-size: rem-calc(60px);
+    letter-spacing: 0.685rem;
+    margin-bottom: rem-calc(84px);
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: 0.5rem;
+      width: rem-calc(77px);
+      background: $text-color;
+    }
+  }
+
+  &__content {
+    font-size: rem-calc(28px);
+    line-height: 176%;
+    letter-spacing: 0.04rem;
+  }
+
+  @include breakpoint(medium down) {
+    padding: 0 1rem;
+    &__image {
+      &::before {
+        max-width: rem-calc(310px);
+        max-height: rem-calc(109px);
+      }
+
+      img {
+        height: rem-calc(160px);
+        width: rem-calc(160px);
+      }
+    }
+    &__title {
+      gap: rem-calc(40px);
+      font-size: rem-calc(40px);
+      margin-bottom: 2.5rem;
+
+      &::after {
+        height: 0.25rem;
+        width: rem-calc(77px);
+      }
+    }
+    &__content {
+      font-size: rem-calc(20px);
+    }
+  }
+  @include breakpoint(small down) {
+    &__title {
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}

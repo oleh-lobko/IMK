@@ -324,3 +324,11 @@ function render_block_tempalte($filepath, $atts = [])
 
     echo '';
 }
+
+function formatCurrency($numberStr)
+{
+    $number = (float) $numberStr;
+    $formatted = number_format($number, 0, '.', ',');
+
+    return '$' . $formatted;
+}

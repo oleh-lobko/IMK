@@ -79,6 +79,11 @@ comment or delete styles below */
   TMPL: Home page
 ----------------------------------------- */
 @import 'templates/home';
+@import 'inc/tabs';
+@import 'inc/side-tabs';
+@import 'inc/faq';
+@import 'inc/video';
+@import 'inc/testimonial';
 
 /* -----------------------------------------
   Page: Blog

@@ -215,12 +215,10 @@ $(document).on('ready', function () {
 
   if ($('#h-tabs-select').length) {
     $('#h-tabs-select').on('change', function () {
-      const val = $(this).val();
-      if ($(val)) {
-        $('.tabs-panel').each(function () {
-          $(this).removeClass('is-active');
-        });
-        $(val).addClass('is-active');
+      const targetPanelId = $(this).val();
+
+      if (targetPanelId) {
+        $('#h-tabs').foundation('selectTab', $(targetPanelId));
       }
     });
   }

@@ -25,6 +25,37 @@
   position: relative;
   padding-left: 30px;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: $primary-color;
+
+    /** TODO: Check fontawesome icon */
+    //font-family: $fa;
+    font-weight: 900;
+    transform: translateY(-50%);
+  }
+
+  &--email {
+    &::before {
+      content: '\f0e0';
+    }
+  }
+
+  &--phone {
+    &::before {
+      content: '\f879';
+    }
+  }
+
+  &--address {
+    &::before {
+      content: '\f3c5';
+    }
+  }
+
   a {
     color: inherit;
     text-decoration: none;

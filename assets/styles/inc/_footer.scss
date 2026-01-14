@@ -59,9 +59,23 @@
   &__menu-links {
     display: flex;
     flex-direction: column;
-    margin-top: rem-calc(56px);
     gap: rem-calc(22px);
-
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li:first-child {
+      a {
+        display: inline-block;
+        font-size: rem-calc(23px);
+        text-transform: uppercase;
+        font-weight: 900;
+        color: $grey;
+        margin-bottom: rem-calc(30px);
+        pointer-events: none;
+      }
+    }
     a {
       font-size: rem-calc(25px);
       font-family: $sub-font;

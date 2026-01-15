@@ -1,3 +1,4 @@
+// \f0d9
 .testimonials {
   margin-bottom: rem-calc(131px);
   text-align: center;
@@ -29,8 +30,8 @@
   .slick-next,
   .slick-prev {
     &::before {
-      content: '\f0d9';
-      font-size: 4rem;
+      content: '';
+      font-size: 2rem;
       display: block;
       background-size: contain;
       width: rem-calc(42px);
@@ -43,7 +44,7 @@
   .slick-next {
     right: 2.7rem;
     &::before {
-      content: '\f0da';
+      content: '';
     }
 
     &::before {
@@ -96,6 +97,18 @@
     }
     .slick-list {
       padding-bottom: 5rem;
+    }
+  }
+  @include breakpoint(small down) {
+    .slick-arrow {
+      top: 99.5%;
+    }
+    .slick-prev {
+      left: 1.3rem;
+    }
+
+    .slick-next {
+      right: 1.3rem;
     }
   }
 }

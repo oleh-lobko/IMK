@@ -1,0 +1,94 @@
+.films {
+  margin-bottom: rem-calc(123px);
+}
+.tablepress > :where(thead, tfoot) > tr > * {
+  background-color: $white !important;
+  color: $black !important;
+  font-size: rem-calc(20px) !important;
+  font-weight: 100 !important;
+  min-height: rem-calc(50px) !important;
+  padding: rem-calc(20px) rem-calc(15px) !important;
+  letter-spacing: 0.06rem !important;
+  border: 1px solid $text-color !important;
+}
+.tablepress > :where(thead) + tbody > :where(:not(.child)) > * {
+  font-size: rem-calc(20px) !important;
+  color: $sand !important;
+  padding: 0 rem-calc(15px) !important;
+  border: 1px solid $white !important;
+  min-height: rem-calc(50px) !important;
+  letter-spacing: 0.06rem !important;
+  border: 1px solid $text-color !important;
+  background-color: transparent !important;
+  min-height: rem-calc(50px) !important;
+  padding: rem-calc(15px) rem-calc(15px) !important;
+  letter-spacing: 0.06rem !important;
+}
+.films {
+  .tablepress {
+    thead th {
+      &.column-4,
+      &.column-5,
+      &.column-6 {
+        text-align: center !important;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    tbody td {
+      &.column-4,
+      &.column-5,
+      &.column-6 {
+        text-align: right !important;
+        align-items: center;
+      }
+    }
+  }
+}
+@include breakpoint(medium down) {
+  .films {
+    margin-bottom: rem-calc(50px);
+    .tablepress {
+      display: block !important;
+      width: 100% !important;
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+
+        tr {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid $text-color;
+          margin-bottom: 10px;
+          line-height: rem-calc(38px);
+        }
+
+        td {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          font-size: rem-calc(14px) !important;
+          line-height: rem-calc(38px);
+          padding: 0 rem-calc(15px);
+          border: none;
+          border-bottom: 1px solid rgba($white, 0.1);
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &::before {
+            content: attr(data-label);
+            position: relative;
+            font-weight: bold;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

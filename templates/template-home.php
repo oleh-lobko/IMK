@@ -12,6 +12,10 @@ get_header(); ?>
 <?php get_template_part('parts/faq'); ?>
 <?php get_template_part('parts/video'); ?>
 <?php get_template_part('parts/testimonial'); ?>
+<?php get_template_part('parts/plans'); ?>
+<?php get_template_part('parts/films'); ?>
+<?php get_template_part('parts/blog'); ?>
+<?php get_template_part('parts/gravity_form'); ?>
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell">

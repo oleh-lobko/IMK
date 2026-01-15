@@ -29,7 +29,8 @@
     "lint:styles": "stylelint \"assets/styles/**/*.scss\"",
     "fix:php": "vendor/bin/php-cs-fixer fix --verbose",
     "fix:scripts": "prettier --write \"assets/scripts/**/*.js\"",
-    "fix:styles": "prettier --write \"assets/**/*.scss\""
+    "fix:styles": "prettier --write \"assets/**/*.scss\"",
+    "fix:all:build": "yarn run fix:php && yarn run fix:scripts && yarn run fix:styles && yarn run build:production"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",

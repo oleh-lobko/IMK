@@ -1,0 +1,150 @@
+.plans {
+  margin-bottom: rem-calc(126px);
+  @include breakpoint(medium down) {
+    margin-bottom: rem-calc(80px);
+  }
+
+  &::before {
+    content: '';
+    background: url('../images/gradient.png');
+    display: block;
+    height: 222.75rem;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-38%);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover;
+  }
+
+  &__table {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  &__col {
+    display: contents;
+  }
+
+  &__cell {
+    font-size: 28px;
+    color: $text-color;
+    padding: 0.5rem rem-calc(20px) 0;
+    letter-spacing: 0.08rem;
+    @include breakpoint(medium down) {
+      padding: 0.75rem rem-calc(20px);
+    }
+
+    &:not(.plans__cell--bottom) {
+      border: 1px solid #e9e7bf;
+    }
+
+    &--bottom {
+      text-align: center;
+
+      a {
+        font-size: rem-calc(28px);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $text-color;
+        width: 100%;
+        display: block;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &--label {
+      font-size: rem-calc(40px);
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 100%;
+      @include breakpoint(medium down) {
+        padding-top: rem-calc(10px);
+        padding-bottom: rem-calc(10px);
+      }
+    }
+
+    &--ticked,
+    &--none {
+      &::after {
+        position: relative;
+        display: block;
+      }
+    }
+
+    &--ticked {
+      &::after {
+        content: '';
+        width: 100%;
+        height: rem-calc(39px);
+        position: relative;
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 384'%3E%3Cpath fill='%23eae8bf' d='M384 101.25c-2.05 2.92-3.74 6.21-6.22 8.7-76.5 76.78-153.08 153.48-229.65 230.19-7.21 7.22-13.31 7.19-20.55-.1-40.4-40.66-80.8-81.31-121.19-121.97-7.52-7.57-7.54-13.66-.05-21.17 14.82-14.85 29.63-29.7 44.46-44.54 6.94-6.95 13.35-6.94 20.33.05 21.44 21.47 42.87 42.95 64.29 64.44.79.79 1.4 1.76 2.35 2.97 1.37-1.29 2.35-2.15 3.27-3.07 57.33-57.45 114.65-114.91 171.98-172.37 7.78-7.8 13.64-7.83 21.39-.08C348.62 58.51 362.89 72.68 377 87c2.65 2.69 4.68 5.98 7 9v5.25z'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        @include breakpoint(medium down) {
+          width: rem-calc(20px);
+          height: rem-calc(20px);
+        }
+      }
+    }
+
+    &--none {
+      &::after {
+        content: '\f068';
+        font-weight: 900;
+        font-family: 'Font Awesome\ 6 Free';
+        text-align: center;
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+    &__table {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(50px);
+    }
+    &__col {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid #e9e7bf;
+    }
+    &__cell {
+      display: flex;
+      justify-content: space-between;
+      background-color: transparent !important;
+      font-size: rem-calc(16px);
+
+      &--label,
+      &--bottom {
+        justify-content: center;
+      }
+
+      &--label,
+      &--bottom a {
+        font-size: rem-calc(20px);
+      }
+
+      &--label {
+        border-bottom-width: 2px;
+      }
+
+      &--bottom {
+        border-top-width: 2px;
+      }
+
+      &::before {
+        content: attr(data-feature);
+        position: relative;
+        display: block;
+      }
+    }
+  }
+}

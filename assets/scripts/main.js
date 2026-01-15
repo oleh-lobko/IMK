@@ -228,6 +228,31 @@ $(document).on('ready', function () {
       $('.search').toggle();
     });
   }
+  const initMobileTable = () => {
+    $('.tablepress').each(function () {
+      const $table = $(this);
+      // Отримуємо назви заголовків
+      const headers = $table
+        .find('thead th')
+        .map(function () {
+          return $(this).text().trim();
+        })
+        .get();
+
+      // Додаємо кожній комірці атрибут data-label
+      $table.find('tbody tr').each(function () {
+        $(this)
+          .find('td')
+          .each(function (index) {
+            if (headers[index]) {
+              $(this).attr('data-label', headers[index] + ':');
+            }
+          });
+      });
+    });
+  };
+
+  initMobileTable();
 });
 
 /**

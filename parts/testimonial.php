@@ -1,7 +1,7 @@
 <?php
 $testimonials = get_field('testimonials_select') ?: [];
 $button_text = get_field('testimonials_button_text') ?: '';
-$archive_link = get_post_type_archive_link('testimonial');
+$archive_link = get_post_type_archive_link('testimonialss');
 
 if (!empty($testimonials)) { ?>
     <section class="testimonials">

@@ -1,0 +1,162 @@
+.blog-section {
+  padding-bottom: rem-calc(434px);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-image: url('../images/blog-decoration.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    left: 50%;
+    bottom: 0;
+    top: rem-calc(30px);
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  @include breakpoint(1580 down) {
+    padding-bottom: rem-calc(120px);
+    &::after {
+      display: none;
+    }
+  }
+
+  &__title {
+    display: flex;
+    gap: rem-calc(89px);
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+      font-size: rem-calc(40px);
+      letter-spacing: 0.8rem;
+      @include breakpoint(large) {
+        font-size: rem-calc(60px);
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: rem-calc(86px);
+      width: rem-calc(95px);
+      background-image: url('../images/title-decor.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__grid {
+    margin: rem-calc(40px) 0 rem-calc(76px);
+    justify-content: center;
+    row-gap: rem-calc(86px);
+    @include breakpoint(large) {
+      margin: rem-calc(132px) 0 rem-calc(76px);
+    }
+  }
+
+  &__link {
+    a {
+      color: $text-color;
+      border: 1px solid $white;
+      max-width: rem-calc(1105px);
+      transition: $transition;
+
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.post-card {
+  max-width: rem-calc(525px);
+  box-sizing: content-box;
+  @include breakpoint(1580) {
+    padding: 0 2rem;
+  }
+  &:hover {
+    p,
+    h3 {
+      color: $primary;
+    }
+
+    img {
+      scale: 1.1;
+    }
+  }
+
+  p,
+  h3 {
+    color: $text-color;
+  }
+
+  &__date {
+    font-size: rem-calc(28px);
+    font-weight: 700;
+    margin-bottom: 3px;
+    letter-spacing: 0.14rem;
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin-bottom: 1rem;
+    }
+    @include breakpoint(medium down) {
+      font-size: rem-calc(20px);
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: rem-calc(32px);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: rem-calc(28px);
+    letter-spacing: 0.14rem;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(24px);
+    }
+  }
+
+  &__content {
+    font-size: rem-calc(28px);
+    font-family: $sub-font;
+    line-height: 122%;
+    letter-spacing: 0.02rem;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(20px);
+    }
+  }
+
+  &__img {
+    margin-bottom: rem-calc(45px);
+    height: rem-calc(345px);
+    overflow: hidden;
+    @include breakpoint(medium down) {
+      height: rem-calc(200px);
+      margin-bottom: rem-calc(20px);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      transition: $transition;
+      object-fit: cover;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    max-width: 100%;
+    padding: 0;
+  }
+}

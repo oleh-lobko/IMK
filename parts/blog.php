@@ -6,7 +6,7 @@ $blog_posts = get_field('blog_posts') ?: [];
 $blog_title = get_field('blog_section_title') ?: '';
 $blog_label = get_field('blog_link') ?: '';
 $category_url = '';
-
+$section_id = 'blog';
 if ($blog_label) {
     $category = get_category_by_slug('uncategorized');
     if ($category) {
@@ -14,7 +14,7 @@ if ($blog_label) {
     }
 }
 if (!empty($blog_posts)) { ?>
-    <section class="blog-section">
+    <section class="blog-section" id="<?php echo esc_attr($section_id); ?>">
         <div class="grid-container grid-container--s">
 
             <?php if ($blog_title) { ?>

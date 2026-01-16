@@ -3,6 +3,7 @@
  * Home Tabs Section.
  */
 $tabs = get_field('tabs') ?: [];
+$section_id = 'tabs';
 
 if (!empty($tabs)) {
     $tabs_link_text = get_field('tabs_link_text') ?: '';
@@ -16,7 +17,7 @@ if (!empty($tabs)) {
     }
     ?>
 
-    <section class="h-tabs">
+    <section class="h-tabs" id="<?php echo esc_attr($section_id); ?>">
         <div class="grid-container">
             <div class="h-tabs__content">
 

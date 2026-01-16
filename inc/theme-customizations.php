@@ -69,6 +69,7 @@ add_post_type_support('page', 'excerpt');
 // Register Navigation Menu
 register_nav_menus([
     'header-menu' => __('Header Menu', 'fwp'),
+    'header-menu-inner' => __('Header Menu Inner', 'fwp'),
     'footer-first-menu' => __('Footer First Menu', 'fwp'),
     'footer-second-menu' => __('Footer Second Menu', 'fwp'),
     'footer-third-menu' => __('Footer Third  Menu', 'fwp'),
@@ -326,11 +327,11 @@ add_filter(
             if (is_array($size)) {
                 $image[1] = $size[0];
                 $image[2] = $size[1];
-            //            } elseif (($xml = simplexml_load_file($image[0])) !== false) {
-            //                $attr = $xml->attributes();
-            //                $viewbox = explode(' ', $attr->viewBox);
-            //                $image[1] = isset($attr->width) && preg_match('/\d+/', $attr->width, $value) ? (int) $value[0] : (4 == count($viewbox) ? (int) $viewbox[2] : null);
-            //                $image[2] = isset($attr->height) && preg_match('/\d+/', $attr->height, $value) ? (int) $value[0] : (4 == count($viewbox) ? (int) $viewbox[3] : null);
+                //            } elseif (($xml = simplexml_load_file($image[0])) !== false) {
+                //                $attr = $xml->attributes();
+                //                $viewbox = explode(' ', $attr->viewBox);
+                //                $image[1] = isset($attr->width) && preg_match('/\d+/', $attr->width, $value) ? (int) $value[0] : (4 == count($viewbox) ? (int) $viewbox[2] : null);
+                //                $image[2] = isset($attr->height) && preg_match('/\d+/', $attr->height, $value) ? (int) $value[0] : (4 == count($viewbox) ? (int) $viewbox[3] : null);
             } else {
                 $image[1] = $image[2] = null;
             }

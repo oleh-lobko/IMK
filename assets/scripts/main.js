@@ -238,8 +238,6 @@ $(document).on('ready', function () {
           return $(this).text().trim();
         })
         .get();
-
-      // Додаємо кожній комірці атрибут data-label
       $table.find('tbody tr').each(function () {
         $(this)
           .find('td')

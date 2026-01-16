@@ -4,9 +4,23 @@
  *
  * Loop container for single post content
  */
-get_header(); ?>
+get_header('inner'); ?>
 <main class="main-content">
-    <div class="grid-container">
+    <section class="heading rel-content">
+        <?php $single_post_page_heading_image = get_field(
+            'single_post_page_heading_image', 'option'
+        );
+        if ($single_post_page_heading_image) { ?>
+            <?php echo wp_get_attachment_image($single_post_page_heading_image, 'full', false, ['class' => 'stretched-img']); ?>
+        <?php } ?>
+
+        <div class="grid-container grid-container--s">
+            <div class="cell small-12">
+                <h2 class="title page-title page-title--category"><?php echo the_title(); ?></h2>
+            </div>
+        </div>
+    </section>
+    <div class="grid-container grid-container--s">
         <div class="grid-x grid-margin-x">
             <!-- BEGIN of post content -->
             <div class="large-8 medium-8 small-12 cell">
@@ -14,7 +28,6 @@ get_header(); ?>
                     <?php while (have_posts()) {
                         the_post(); ?>
                         <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
-                            <h1 class="page-title entry__title"><?php the_title(); ?></h1>
                             <?php if (has_post_thumbnail()) { ?>
                                 <div title="<?php the_title_attribute(); ?>" class="entry__thumb">
                                     <?php the_post_thumbnail('large'); ?>
@@ -25,7 +38,6 @@ get_header(); ?>
                                 <?php the_content('', true); ?>
                             </div>
                             <h6 class="entry__cat"><?php _e('Posted Under: ', 'fwp'); ?><?php the_category(', '); ?></h6>
-                            <?php comments_template(); ?>
                         </article>
                     <?php } ?>
                 <?php } ?>

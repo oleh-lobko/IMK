@@ -80,7 +80,7 @@
     display: none;
   }
 
-  .header-menu {
+  .header-menu-inner {
     background: transparent;
     gap: rem-calc(29px);
     margin-bottom: rem-calc(20px);
@@ -112,17 +112,18 @@
   }
 }
 
-@media (min-width: 1480px) {
+@media (min-width: 1040px) {
   .header {
-    &__content {
-      &::before {
-        position: absolute;
-        content: '';
-        height: rem-calc(14px);
-        width: rem-calc(92px);
-        display: block;
-        background: url('../images/bow-and-arrow.png');
-        left: rem-calc(43px);
+    .header-menu-inner {
+      &__content {
+        &::before {
+          content: '';
+          height: rem-calc(14px);
+          width: rem-calc(92px);
+          display: block;
+          background: url('../images/bow-and-arrow.png');
+          left: rem-calc(43px);
+        }
       }
     }
   }
@@ -256,7 +257,7 @@ input[type='search' i]::-webkit-search-cancel-button {
   }
   /* TOP BAR STYLING */
 
-  .header-menu.menu {
+  .header-menu-inner.menu {
     /* Align menu items to the right */
     // justify-content: flex-end;
 

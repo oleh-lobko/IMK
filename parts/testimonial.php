@@ -2,9 +2,10 @@
 $testimonials = get_field('testimonials_select') ?: [];
 $button_text = get_field('testimonials_button_text') ?: '';
 $archive_link = get_post_type_archive_link('testimonialss');
+$section_id = 'slider';
 
 if (!empty($testimonials)) { ?>
-    <section class="testimonials">
+    <section class="testimonials" id="<?php echo esc_attr($section_id); ?>">
         <div class="grid-container grid-container--s">
 
             <div class="testimonials__slider">

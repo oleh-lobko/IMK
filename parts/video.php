@@ -4,13 +4,14 @@
  */
 $video_url = get_field('video_url') ?: '';
 $video_image_id = get_field('video_image') ?: 0;
+$section_id = 'video';
 
 if (is_array($video_image_id)) {
     $video_image_id = $video_image_id['id'];
 }
 
 if (!empty($video_url)) { ?>
-    <section class="video">
+    <section class="video" id="<?php echo esc_attr($section_id); ?>">
         <div class="grid-container grid-container--s">
             <a class="video__item" href="<?php echo esc_url($video_url); ?>"
                data-fancybox

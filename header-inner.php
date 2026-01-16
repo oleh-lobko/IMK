@@ -40,7 +40,7 @@ use theme\FoundationNavigation;
                     </div>
                 </div>
                 <div class="cell auto large-9 header__content">
-                    <?php if (has_nav_menu('header-menu')) { ?>
+                    <?php if (has_nav_menu('header-menu-inner')) { ?>
                         <div class="title-bar hide-for-large"
                              data-responsive-toggle="main-menu"
                              data-hide-for="large">
@@ -50,9 +50,9 @@ use theme\FoundationNavigation;
                             </button>
                         </div>
 
-                        <nav class="top-bar" id="main-menu">
+                        <nav class="top-bar-inner" id="main-menu">
                             <?php wp_nav_menu([
-                                'theme_location' => 'header-menu',
+                                'theme_location' => 'header-menu-inner',
                                 'menu_class' => 'menu header-menu',
                                 'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion large-dropdown" data-submenu-toggle="true" data-multi-open="false" data-close-on-click-inside="false">%3$s</ul>',
                                 'walker' => new FoundationNavigation(),

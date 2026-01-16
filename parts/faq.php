@@ -3,10 +3,10 @@
  * FAQ Section.
  */
 $faq_items = get_field('faq', 'option') ?: [];
-
+$section_id = 'accordion';
 if (!empty($faq_items)) {
     $faq_section_title = get_field('faq_section_title', 'option') ?: ''; ?>
-    <section class="faqs">
+    <section class="faqs" id="<?php echo esc_attr($section_id); ?>">
         <div class="grid-container grid-container--s">
 
             <?php if ($faq_section_title) { ?>

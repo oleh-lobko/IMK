@@ -3,9 +3,10 @@
  * Side Tabs Section.
  */
 $side_tabs = get_field('side_tabs') ?: [];
+$section_id = 'side-nav';
 
 if (!empty($side_tabs)) { ?>
-    <section class="side_tabs">
+    <section class="side_tabs" id="<?php echo esc_attr($section_id); ?>">
         <div class="grid-container grid-container--s">
             <div class="grid-x align-justify">
 

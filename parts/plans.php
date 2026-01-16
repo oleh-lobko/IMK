@@ -11,9 +11,9 @@ $plans = get_field('plans_select') ?: [];
 $plans_button_text = get_field('plans_button_text') ?: '';
 $features_count = count($features);
 $plans_count = count($plans);
-
+$section_id = 'tables';
 if (!empty($features) && !empty($plans)) { ?>
-    <section class="plans">
+    <section class="plans" id="<?php echo esc_attr($section_id); ?>">
         <div class="grid-container grid-container--s">
             <div class="plans__table"
                  style="grid-template-rows: 60px repeat(<?php echo esc_attr($features_count + 1); ?>, 53px);

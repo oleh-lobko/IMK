@@ -59,16 +59,15 @@ comment or delete styles below */
   Repeatable blocks
 ----------------------------------------- */
 @import 'inc/repeatable-blocks';
+/* -----------------------------------------
+  Sidebar
+----------------------------------------- */
+@import 'inc/sidebar';
 
 /* -----------------------------------------
   Header
 ----------------------------------------- */
 @import 'inc/header';
-
-/* -----------------------------------------
-  Sidebar
------------------------------------------ */
-@import 'inc/sidebar';
 
 /* -----------------------------------------
   Footer
@@ -87,11 +86,13 @@ comment or delete styles below */
 @import 'inc/plans';
 @import 'inc/film';
 @import 'inc/blog';
+@import 'inc/contact-form';
 
 /* -----------------------------------------
   Page: Blog
 ----------------------------------------- */
 @import 'templates/blog';
+@import 'templates/post-page';
 
 /* -----------------------------------------
   TMPL: Default page
